@@ -1,0 +1,144 @@
+/* Global Styles */
+body {
+  font-family: 'Playfair Display', serif;
+  padding: 0;
+  padding-top: 60px; /* space for fixed nav */
+  background-color: #f7f7f7;
+  color: #333;
+  
+}
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;/*Removes the default underline from links.*/
+  color: inherit;/*Makes links inherit color from text*/
+}
+
+nav {
+ position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ddd7ce;
+  padding: 10px 20px;/* padding of 10px on top and bottom and 20px on left and right*/
+  display: flex;
+  justify-content: center;/*Centers the nav links horizontally*/
+  align-items: center;/*Centers the nav links vertically*/
+  gap: 20px;/* gab between two links*/
+  z-index: 1000;/* ensure the nav bar is on top and does not overlap other content*/
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  margin: 0 15px;
+  color: #776c5c;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s;
+}
+
+nav a:hover { /*hover is a keyword when the mouse in on the link*/ 
+  color:#0ab0ab;
+}
+
+/* Hero Section (Home Page Only) */
+.hero {
+  height: 100vh;
+  background: url('assets/background.png') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: #111;
+}
+
+/* Curved Text SVG Setup */
+.curve-text {
+ width: 300px;
+  height: 300px;
+  position:absolute;
+  z-index: 1;
+}
+/* SVG Circular Image */
+.svg-profile-pic {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;/*Crops to fit the circle.*/
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  top: 50%;
+  left: 50%;
+  position: center;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+/* General Section Styling */
+section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px 20px;
+  background-color: #ddd7ce;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Profile Picture (Used on About Page) */
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Cards */
+.project {
+  background-color: #b4ada1;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 5px solid #0097b2;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+
+.project h3 {
+  margin-top: 0;
+  color: #51392a;
+}
+
+/* Contact Section */
+#contact a {
+  color: #0097b2;
+}
+
+
+/* change if run on mobile */
+@media (max-width: 600px) {
+  nav a {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .curve-text {
+    width: 90%;
+    height: auto;
+  }
+
+  .project {
+    padding: 15px;
+  }
+}
